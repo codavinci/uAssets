@@ -460,11 +460,6 @@ uol.com.br##.banner
 uol.com.br##.bg-banner
 uol.com.br##[id^="banner-300x250"]:remove()
 
-! https://news.ycombinator.com/edit?id=12281229
-quora.com##body:style(overflow: auto !important)
-! https://github.com/NanoAdblocker/NanoFilters/issues/42
-quora.com##.signup_wall_prevent_scroll .SiteHeader,.signup_wall_prevent_scroll .LoggedOutFooter,.signup_wall_prevent_scroll .ContentWrapper:style(filter: none !important;)
-
 ! https://github.com/gorhill/uBlock/issues/1879
 ||popads.net/pop.js$script,redirect=popads.net.js
 
@@ -2642,11 +2637,9 @@ voyeurhit.com##.videoplayer-wrapper > link + span[class]
 
 ! https://github.com/uBlockOrigin/uAssets/issues/957
 upornia.com##+js(acis, adver)
-upornia.com##+js(nosiif, readyState)
 upornia.com##+js(nosiif, undefined)
 upornia.com##+js(nowoif)
 upornia.com##.footer-block
-||upornia.com/roman/*$script,1p
 
 ! https://github.com/uBlockOrigin/uAssets/issues/2074
 hotmovs.com##+js(acis, adver)
@@ -5052,6 +5045,7 @@ reddit.com##div[class][data-before-content="advertisement"]:not([id])
 ! https://forums.lanik.us/viewtopic.php?f=62&t=40330
 toyoheadquarters.com##+js(aopr, document.dispatchEvent)
 @@||toyoheadquarters.com^$ghide
+toyoheadquarters.com##.adsbygoogle
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1831
 *$frame,domain=so.gd,3p
@@ -5148,9 +5142,9 @@ megaup.net##+js(nowoif)
 megaup.net##[src*=".jpg"]:upward(1)
 @@||jsc.adskeeper.co.uk/*/megaup.net$script,domain=megaup.net
 @@||servicer.adskeeper.co.uk^$script,domain=megaup.net
-@@*$image,3p,domain=megaup.net
-!megaup.net##[id^="AdskeeperComposite"]:style(padding-top:1100px!important;)
-megaup.net##.metaRedirectWrapperBottomAds:style(height: 400px !important; display: none !important;)
+!@@*$image,3p,domain=megaup.net
+megaup.net##[id^="AdskeeperComposite"]
+megaup.net##.metaRedirectWrapperBottomAds:style(height: 400px !important;)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/1850
 aquipelis.*##+js(aopw, smrtSB)
@@ -11592,11 +11586,6 @@ cashperlink.com##.banner
 ! https://github.com/uBlockOrigin/uAssets/issues/4503
 movie4kcom.com##+js(aopw, Fingerprint2)
 
-! https://github.com/uBlockOrigin/uAssets/issues/4508
-filmywaap.*##+js(aopr, DHAntiAdBlocker)
-filmywaap.*##[src^="blob:https://filmywaap.xyz/"]
-filmywaap.*##[href*="/supply"]
-
 ||cdn.provesrc.com/provesrc.js
 
 ! https://github.com/uBlockOrigin/uAssets/issues/4510
@@ -11990,16 +11979,17 @@ legionjuegos.org,legionmusica.org,legionpeliculas.org,legionprogramas.org##+js(s
 ||adpop.me^$popup,domain=legionjuegos.org|legionmusica.org|legionpeliculas.org|legionprogramas.org
 ||ouo.*^$popup,domain=legionjuegos.org|legionmusica.org|legionpeliculas.org|legionprogramas.org
 
-! https://forums.lanik.us/viewtopic.php?p=144936#p144936
-mp3next.*##+js(acis, Math, zfgloaded)
-
 ! https://github.com/uBlockOrigin/uAssets/issues/4681
 bananamovies.net##+js(popads-dummy)
 bananamovies.net##+js(aopr, ExoLoader.serve)
 bananamovies.net##+js(acis, puShown , /doOpen|popundr/)
 bananamovies.net##+js(nowoif)
 ||bananamovies.net/sw.js$script,1p
+||bananamovies.net/*.php|$script,1p
+||adxxx.com^$3p
 ||bornate.info^
+wiztube.xyz##+js(aopr, BetterJsPop)
+wiztube.xyz##body > div[style*="z-index:"]
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/aho1fs/help_with_ads_and_overlays_on_a_website/
 kinoger.to##+js(acis, atob, decodeURIComponent)
@@ -12787,7 +12777,7 @@ link-to.net##.ad-block-1
 ||aj1603.online^
 ||d13jhr4vol1304.cloudfront.net^
 ||oppfiles.com/common/scriptjs.php
-/jquery.watch.js|$script,1p,important
+/jquery.watch.js|$script,1p,important,domain=~dekrantvantoen.nl
 
 ! https://forums.lanik.us/viewtopic.php?p=145787#p145787
 ! https://github.com/uBlockOrigin/uAssets/issues/7644
@@ -17581,7 +17571,6 @@ darmowa-telewizja.online##+js(acis, Math, zfgloaded)
 ! https://github.com/uBlockOrigin/uAssets/issues/6269
 qoshe.com##+js(nostif, adBlock)
 yandexcdn.com##+js(nowoif)
-yandexcdn.com##+js(nowebrtc)
 @@||yandexcdn.com^$ghide
 @@||yandexcdn.com^$script,xhr,1p
 @@||cdn.jsdelivr.net/npm/videojs-contrib-ads/$domain=yandexcdn.com
@@ -20274,7 +20263,9 @@ sensualgirls.org##.cbox_cont > div[style="text-align: center;"]
 sensualgirls.org##div[data-width][style*="background-image: url"]:style(background: none !important)
 
 ! https://github.com/NanoMeow/QuickReports/issues/2666
+! https://github.com/uBlockOrigin/uAssets/issues/8667
 edvok.com##+js(nowebrtc)
+@@||edvok.com^$ghide
 
 ! https://github.com/NanoMeow/QuickReports/issues/2667
 knack.be##+js(nostif, Bait)
@@ -23212,11 +23203,11 @@ fiches-auto.fr##.adsbygoogle:style(visibility: collapse !important)
 ludigames.com##+js(nostif, ads)
 
 ! https://github.com/uBlockOrigin/uAssets/issues/7180
-imageking.xyz,imgair.net,imgao.xyz,imgblaze.net,imgfl.xyz,imggoing.xyz,imgkes.xyz,imgkis.xyz,imgko.xyz,imgkoi.xyz,imgweng.xyz,imgwew.xyz,imgxen.xyz,imgxn.xyz,imgxx.xyz,imgzer.net,venpix.xyz,vestimage.site##+js(nano-sib, timer)
-imageking.xyz,imgair.net,imgao.xyz,imgblaze.net,imgfl.xyz,imggoing.xyz,imgkes.xyz,imgkis.xyz,imgko.xyz,imgkoi.xyz,imgweng.xyz,imgwew.xyz,imgxen.xyz,imgxn.xyz,imgxx.xyz,imgzer.net,venpix.xyz,vestimage.site##+js(nowoif, !/prcf.fiyar|themes|pixsense|.jpg/)
-imageking.xyz,imgair.net,imgao.xyz,imgblaze.net,imgfl.xyz,imggoing.xyz,imgkes.xyz,imgkis.xyz,imgko.xyz,imgkoi.xyz,imgweng.xyz,imgwew.xyz,imgxen.xyz,imgxn.xyz,imgxx.xyz,imgzer.net,venpix.xyz,vestimage.site##+js(set, hold_click, false)
-imageking.xyz,imgair.net,imgao.xyz,imgblaze.net,imgfl.xyz,imggoing.xyz,imgkes.xyz,imgkis.xyz,imgko.xyz,imgkoi.xyz,imgweng.xyz,imgwew.xyz,imgxen.xyz,imgxn.xyz,imgxx.xyz,imgzer.net,venpix.xyz,vestimage.site###pbe
-*$frame,script,3p,denyallow=googleapis.com,domain=imageking.xyz|imgair.net|imgao.xyz|imgblaze.net|imgfl.xyz|imggoing.xyz|imgkes.xyz|imgkis.xyz|imgko.xyz|imgkoi.xyz|imgweng.xyz|imgwew.xyz|imgxen.xyz|imgxn.xyz|imgxx.xyz|imgzer.net|venpix.xyz|vestimage.site
+imageking.xyz,imgair.net,imgao.xyz,imgblaze.net,imgfl.xyz,imggoing.xyz,imgkes.xyz,imgkis.xyz,imgko.xyz,imgkoi.xyz,imglin.xyz,imgweng.xyz,imgwew.xyz,imgxen.xyz,imgxn.xyz,imgxx.xyz,imgzer.net,venpix.xyz,vestimage.site##+js(nano-sib, timer)
+imageking.xyz,imgair.net,imgao.xyz,imgblaze.net,imgfl.xyz,imggoing.xyz,imgkes.xyz,imgkis.xyz,imgko.xyz,imgkoi.xyz,imglin.xyz,imgweng.xyz,imgwew.xyz,imgxen.xyz,imgxn.xyz,imgxx.xyz,imgzer.net,venpix.xyz,vestimage.site##+js(nowoif, !/prcf.fiyar|themes|pixsense|.jpg/)
+imageking.xyz,imgair.net,imgao.xyz,imgblaze.net,imgfl.xyz,imggoing.xyz,imgkes.xyz,imgkis.xyz,imgko.xyz,imgkoi.xyz,imglin.xyz,imgweng.xyz,imgwew.xyz,imgxen.xyz,imgxn.xyz,imgxx.xyz,imgzer.net,venpix.xyz,vestimage.site##+js(set, hold_click, false)
+imageking.xyz,imgair.net,imgao.xyz,imgblaze.net,imgfl.xyz,imggoing.xyz,imgkes.xyz,imgkis.xyz,imgko.xyz,imgkoi.xyz,imglin.xyz,imgweng.xyz,imgwew.xyz,imgxen.xyz,imgxn.xyz,imgxx.xyz,imgzer.net,venpix.xyz,vestimage.site###pbe
+*$frame,script,3p,denyallow=googleapis.com,domain=imageking.xyz|imgair.net|imgao.xyz|imgblaze.net|imgfl.xyz|imggoing.xyz|imgkes.xyz|imgkis.xyz|imgko.xyz|imgkoi.xyz|imglin.xyz|imgweng.xyz|imgwew.xyz|imgxen.xyz|imgxn.xyz|imgxx.xyz|imgzer.net|venpix.xyz|vestimage.site
 ||chaglihysty.pro^
 ||aspirinelitistunderstood.com^
 ||gahapule.pro^
@@ -23229,6 +23220,8 @@ imageking.xyz,imgair.net,imgao.xyz,imgblaze.net,imgfl.xyz,imggoing.xyz,imgkes.xy
 ||restights.pro^
 ||seizedbraggingdeceptive.com^
 ||wivamyno.pro^
+||pedestrianneighbourly.com^
+||thugitori.pro^
 
 ! https://www.reddit.com/r/uBlockOrigin/comments/fqjo82/pandora_just_started_detecting_ad_blocker_wont/
 @@||pandora.com/web-version/*/ads.json$1p
